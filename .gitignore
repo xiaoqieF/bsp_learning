@@ -1,0 +1,53 @@
+# External source trees and their nested repositories.
+/linux-6.12/
+/busybox-1.36.1/
+
+# QEMU, kernel, module and filesystem build output.
+/out/
+/rootfs/*
+!/rootfs/init
+/rootfs.cpio.gz
+/docs/*.dtb
+*.cpio
+*.cpio.gz
+*.tar
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.zip
+*.dtb
+*.ext4
+*.img
+*.iso
+*.raw
+*.qcow2
+*.bin
+Image
+vmlinux
+vmlinux.*
+System.map
+Module.symvers
+modules.order
+*.order
+*.symvers
+
+# Kbuild and compiler intermediates.
+*.a
+*.cmd
+*.ko
+*.map
+*.mod
+*.mod.c
+*.mod.o
+*.o
+.*.cmd
+.*.d
+.*.tmp
+
+# Logs and local tooling state.
+*.log
+*.pid
+.cache/
+.clangd/
+.idea/
+.vscode/

@@ -1,0 +1,15 @@
+#!/bin/sh
+
+mount -t proc none /proc 2>/dev/null || true
+mount -t sysfs none /sys 2>/dev/null || true
+mount -t devtmpfs none /dev 2>/dev/null || true
+mkdir -p /sys/kernel/debug
+mount -t debugfs none /sys/kernel/debug 2>/dev/null || true
+
+echo
+echo "================================"
+echo "   Welcome to my ARM64 Linux"
+echo "================================"
+echo
+
+exec /bin/sh
