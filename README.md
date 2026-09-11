@@ -128,6 +128,20 @@ labs/common/check-tools.sh
 
 注意：部分实验的 `src/Makefile` 使用默认的 `linux-6.12` 相对路径，若移动内核目录，优先保留默认目录名，或同步调整对应 Makefile 的 `KERNEL_DIR`。
 
+## VS Code 驱动代码提示和跳转
+
+仓库提供了 VS Code 工作区配置，使用 `clangd` 读取 Linux Kbuild 的真实编译参数，因此可以识别内核生成头文件、配置宏、ARM64 交叉编译选项，并支持内核 API 的补全、定义跳转和引用查找。根目录的 `.clangd` 会过滤当前 clangd 版本无法解析的少数 GCC/Kbuild 专用参数。
+
+先在 VS Code 扩展中安装推荐的 `clangd` 扩展，然后在仓库根目录执行：
+
+```bash
+labs/common/generate-compile-commands.sh
+```
+
+也可以按 `Ctrl+Shift+P`，运行 `Tasks: Run Task`，选择 `Generate kernel module compile database`。之后打开 `labs/*/src/*.c` 文件即可使用提示和跳转；内核源码中的定义也会被索引。每次修改内核配置或重新生成内核后，再运行一次这个任务即可刷新数据库。
+
+注意：生成脚本会先用当前 `linux-6.12/.config` 重新检查并构建各个外部模块，所以必须先完成内核配置，并确保 `aarch64-linux-gnu-gcc` 可用。
+
 ## 快速开始
 
 在仓库根目录执行：

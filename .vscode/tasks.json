@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Generate kernel module compile database",
+            "type": "shell",
+            "command": "${workspaceFolder}/labs/common/generate-compile-commands.sh",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Build current lab module",
+            "type": "shell",
+            "command": "make",
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": []
+        }
+    ]
+}

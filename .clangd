@@ -1,0 +1,12 @@
+CompileFlags:
+  Remove:
+    - -mabi=lp64
+    - -fno-allow-store-data-races
+    - -fconserve-stack
+    - -femit-struct-debug-baseonly
+    - -mbranch-protection=*
+    - -mstack-protector-guard=*
+    - -mstack-protector-guard-reg=*
+    - -mstack-protector-guard-offset=*
+    - -Wa,*
+    - -fno-var-tracking

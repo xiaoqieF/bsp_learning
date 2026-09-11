@@ -1,0 +1,13 @@
+{
+    "clangd.arguments": [
+        "--compile-commands-dir=${workspaceFolder}",
+        "--background-index",
+        "--completion-style=detailed",
+        "--header-insertion=never",
+        "--query-driver=/usr/bin/aarch64-linux-gnu-*"
+    ],
+    "files.associations": {
+        "*.c": "c",
+        "*.h": "c"
+    }
+}
