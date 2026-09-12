@@ -1,12 +1,12 @@
-# Lab 06：Virtio Block 与持久化 RootFS
+# Lab 07：Virtio Block 与持久化 RootFS
 
 本实验不使用 initramfs 启动用户空间，而是让 Kernel 通过 QEMU 的 virtio-blk 设备挂载 ext4 镜像，并执行磁盘上的 `/init`。
 
 ## 构建和运行
 
 ```bash
-labs/06-virtio-storage/build.sh
-labs/06-virtio-storage/run.sh
+labs/07-virtio-storage/build.sh
+labs/07-virtio-storage/run.sh
 ```
 
 进入系统后检查：

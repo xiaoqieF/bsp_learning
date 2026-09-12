@@ -6,7 +6,7 @@ SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 COMMON_DIR=$(CDPATH= cd -- "$SCRIPT_DIR/../common" && pwd)
 . "$COMMON_DIR/env.sh"
 
-lab_out="$OUT_DIR/06-virtio-storage"
+lab_out="$OUT_DIR/07-virtio-storage"
 disk="$lab_out/rootfs.ext4"
 mkdir -p "$lab_out"
 

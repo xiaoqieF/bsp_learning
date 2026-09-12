@@ -6,7 +6,7 @@ SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 COMMON_DIR=$(CDPATH= cd -- "$SCRIPT_DIR/../common" && pwd)
 . "$COMMON_DIR/env.sh"
 
-lab_out="$OUT_DIR/08-edu-pci"
+lab_out="$OUT_DIR/09-edu-pci"
 module_src="$lab_out/module-src"
 mkdir -p "$lab_out"
 rm -rf "$module_src"

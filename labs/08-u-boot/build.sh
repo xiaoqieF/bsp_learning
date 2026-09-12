@@ -13,7 +13,7 @@ require_command mkfs.ext4
 make -C "$U_BOOT_DIR" qemu_arm64_defconfig
 make -C "$U_BOOT_DIR" ARCH=arm64 CROSS_COMPILE="$CROSS_COMPILE" -j"${JOBS:-$(getconf _NPROCESSORS_ONLN)}"
 
-lab_out="$OUT_DIR/07-u-boot"
+lab_out="$OUT_DIR/08-u-boot"
 staging="$lab_out/staging"
 mkdir -p "$staging"
 

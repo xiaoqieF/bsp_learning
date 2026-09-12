@@ -1,12 +1,12 @@
-# Lab 08：QEMU EDU PCI、BAR、MMIO 与 IRQ
+# Lab 09：QEMU EDU PCI、BAR、MMIO 与 IRQ
 
 QEMU `edu` 是一个教学型 PCI 设备，提供 PCI BAR、寄存器和可触发的中断。它不依赖设备树，适合在 Platform Driver 之后理解 PCI 总线驱动。
 
 ## 构建和运行
 
 ```bash
-labs/08-edu-pci/build.sh
-labs/08-edu-pci/run.sh
+labs/09-edu-pci/build.sh
+labs/09-edu-pci/run.sh
 ```
 
 进入系统后：

@@ -174,8 +174,8 @@ labs/03-pl031-irq/test.sh
 labs/04-pl061-gpio/test.sh
 labs/06-char-device/test.sh
 labs/05-device-model/test.sh
-labs/06-virtio-storage/test.sh
-labs/08-edu-pci/test.sh
+labs/07-virtio-storage/test.sh
+labs/09-edu-pci/test.sh
 ```
 
 各实验的构建命令、QEMU 内操作、源码重点和通过标准见 [docs/lab-index.md](docs/lab-index.md)：
@@ -184,10 +184,10 @@ labs/08-edu-pci/test.sh
 - Lab 02/03：使用 PL031 RTC 学习 platform driver、MMIO 和 alarm IRQ。
 - Lab 04：使用 PL061 GPIO controller 和 GPIO consumer API。
 - Lab 05：观察 Linux Device Model、sysfs 以及真实设备的 bind/unbind。
-- Lab 06：使用 PL031 alarm 构建字符设备 `/dev` 接口，覆盖 read/write/select/ioctl；它可以替代原有存储 Lab 06。
-- 原 Lab 06：使用 virtio-blk 和 ext4 持久化 rootfs，目录仍为 `labs/06-virtio-storage`。
-- Lab 07：可选演示 U-Boot 启动链，需要外部 U-Boot 源码。
-- Lab 08：使用 QEMU EDU PCI 设备学习 BAR、MMIO 和 IRQ。
+- Lab 06：使用 PL031 alarm 构建字符设备 `/dev` 接口，覆盖 read/write/select/ioctl。
+- Lab 07：使用 virtio-blk 和 ext4 持久化 rootfs。
+- Lab 08：可选演示 U-Boot 启动链，需要外部 U-Boot 源码。
+- Lab 09：使用 QEMU EDU PCI 设备学习 BAR、MMIO 和 IRQ。
 
 单独运行交互式实验时，使用对应的 `build.sh` 和 `run.sh`；自动验收使用对应的 `test.sh`。构建结果都在 `out/`，可安全删除后重新生成：
 
@@ -197,11 +197,11 @@ rm -rf out
 
 ## U-Boot 可选实验
 
-Lab 07 不把 U-Boot 源码复制进本仓库。准备外部 checkout 后执行：
+Lab 08 不把 U-Boot 源码复制进本仓库。准备外部 checkout 后执行：
 
 ```bash
-U_BOOT_DIR=/path/to/u-boot labs/07-u-boot/build.sh
-U_BOOT_DIR=/path/to/u-boot labs/07-u-boot/run.sh
+U_BOOT_DIR=/path/to/u-boot labs/08-u-boot/build.sh
+U_BOOT_DIR=/path/to/u-boot labs/08-u-boot/run.sh
 ```
 
 ## 继续学习

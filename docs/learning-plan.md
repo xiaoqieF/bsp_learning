@@ -23,8 +23,8 @@
 | ⑨ | pinctrl / clock / regulator | ⬜ 待开始 | 进入真实 BSP 前的必要基础 |
 | ⑩ | I2C | ⬜ 待开始 | 理解 I2C adapter、client 和设备树描述 |
 | ⑪ | SPI / UART | ⬜ 待开始 | 学习常见总线和串口设备模型 |
-| ⑫ | U-Boot | 🟡 可选 | Lab 07 已提供启动链脚本，需要外部 U-Boot 源码 |
-| ⑬ | Storage / Filesystem | ✅ 已完成 | Lab 06 使用 virtio-blk 和 ext4 持久化 rootfs |
+| ⑫ | U-Boot | 🟡 可选 | Lab 08 已提供启动链脚本，需要外部 U-Boot 源码 |
+| ⑬ | Storage / Filesystem | ✅ 已完成 | Lab 07 使用 virtio-blk 和 ext4 持久化 rootfs |
 | ⑭ | DMA | ⬜ 待开始 | 为高吞吐外设和 Camera 做准备 |
 | ⑮ | V4L2 | ⬜ 待开始 | Camera 驱动、buffer 和 userspace 接口 |
 | ⑯ | Media Controller | ⬜ 待开始 | 理解 Camera pipeline 和实体连接 |
@@ -407,11 +407,11 @@ labs/01-device-tree/build.sh && labs/01-device-tree/run.sh
 labs/02-pl031-mmio/build.sh && labs/02-pl031-mmio/run.sh
 labs/03-pl031-irq/run.sh
 labs/04-pl061-gpio/run.sh
-labs/06-virtio-storage/run.sh
-labs/08-edu-pci/run.sh
+labs/07-virtio-storage/run.sh
+labs/09-edu-pci/run.sh
 ```
 
-Lab 05 的 sysfs、bind/unbind 操作和 Lab 07 的 U-Boot 外部源码要求，分别见对应目录的 README。当前不把只匹配空节点的练习作为必做环节。
+Lab 05 的 sysfs、bind/unbind 操作和 Lab 08 的 U-Boot 外部源码要求，分别见对应目录的 README。当前不把只匹配空节点的练习作为必做环节。
 
 ## 6. 每个阶段的断点记录模板
 

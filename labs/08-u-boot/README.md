@@ -1,11 +1,11 @@
-# Lab 07：U-Boot 启动链（可选）
+# Lab 08：U-Boot 启动链（可选）
 
 本实验只在需要完整 Bootloader 链路时执行。仓库当前没有 U-Boot 源码，因此脚本通过 `U_BOOT_DIR` 使用外部 U-Boot checkout，不把第三方源码复制进本仓库。
 
 ## 构建
 
 ```bash
-U_BOOT_DIR=/path/to/u-boot labs/07-u-boot/build.sh
+U_BOOT_DIR=/path/to/u-boot labs/08-u-boot/build.sh
 ```
 
 脚本执行 `qemu_arm64_defconfig` 和 ARM64 构建，并准备包含以下文件的 ext4 镜像：
@@ -19,7 +19,7 @@ U_BOOT_DIR=/path/to/u-boot labs/07-u-boot/build.sh
 ## 启动
 
 ```bash
-U_BOOT_DIR=/path/to/u-boot labs/07-u-boot/run.sh
+U_BOOT_DIR=/path/to/u-boot labs/08-u-boot/run.sh
 ```
 
 在 U-Boot 命令行中查看设备：

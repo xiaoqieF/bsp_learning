@@ -6,5 +6,5 @@ SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 COMMON_DIR=$(CDPATH= cd -- "$SCRIPT_DIR/../common" && pwd)
 . "$COMMON_DIR/env.sh"
 
-[ -f "$OUT_DIR/08-edu-pci/rootfs.cpio.gz" ] || "$SCRIPT_DIR/build.sh"
-exec "$COMMON_DIR/run-qemu.sh" 08-edu-pci -device edu
+[ -f "$OUT_DIR/09-edu-pci/rootfs.cpio.gz" ] || "$SCRIPT_DIR/build.sh"
+exec "$COMMON_DIR/run-qemu.sh" 09-edu-pci -device edu
