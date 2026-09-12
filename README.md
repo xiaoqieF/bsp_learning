@@ -172,6 +172,7 @@ labs/01-device-tree/run.sh
 labs/02-pl031-mmio/test.sh
 labs/03-pl031-irq/test.sh
 labs/04-pl061-gpio/test.sh
+labs/06-char-device/test.sh
 labs/05-device-model/test.sh
 labs/06-virtio-storage/test.sh
 labs/08-edu-pci/test.sh
@@ -183,7 +184,8 @@ labs/08-edu-pci/test.sh
 - Lab 02/03：使用 PL031 RTC 学习 platform driver、MMIO 和 alarm IRQ。
 - Lab 04：使用 PL061 GPIO controller 和 GPIO consumer API。
 - Lab 05：观察 Linux Device Model、sysfs 以及真实设备的 bind/unbind。
-- Lab 06：使用 virtio-blk 和 ext4 持久化 rootfs。
+- Lab 06：使用 PL031 alarm 构建字符设备 `/dev` 接口，覆盖 read/write/select/ioctl；它可以替代原有存储 Lab 06。
+- 原 Lab 06：使用 virtio-blk 和 ext4 持久化 rootfs，目录仍为 `labs/06-virtio-storage`。
 - Lab 07：可选演示 U-Boot 启动链，需要外部 U-Boot 源码。
 - Lab 08：使用 QEMU EDU PCI 设备学习 BAR、MMIO 和 IRQ。
 
