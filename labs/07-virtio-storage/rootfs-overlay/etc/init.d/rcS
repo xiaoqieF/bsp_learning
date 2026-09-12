@@ -1,0 +1,15 @@
+#!/bin/sh
+
+mount -t proc proc /proc 2>/dev/null || true
+mount -t sysfs sysfs /sys 2>/dev/null || true
+mount -t devtmpfs devtmpfs /dev 2>/dev/null || true
+mkdir -p /sys/kernel/debug
+mount -t debugfs debugfs /sys/kernel/debug 2>/dev/null || true
+mount -o remount,rw /
+
+echo
+echo "================================"
+echo "   Welcome to my ARM64 Linux"
+echo "   BusyBox init is PID 1"
+echo "================================"
+echo

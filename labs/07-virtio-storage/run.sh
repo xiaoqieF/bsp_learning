@@ -12,7 +12,7 @@ exec qemu-system-aarch64 \
 	-cpu cortex-a57 \
 	-m 1G \
 	-kernel "$KERNEL_DIR/arch/arm64/boot/Image" \
-	-append "console=ttyAMA0 root=/dev/vda rootwait rootfstype=ext4 init=/init loglevel=8" \
+	-append "console=ttyAMA0 root=/dev/vda rootwait rootfstype=ext4 init=/sbin/init loglevel=8" \
 	-drive "if=none,file=$OUT_DIR/07-virtio-storage/rootfs.ext4,format=raw,id=rootdisk" \
 	-device virtio-blk-device,drive=rootdisk \
 	-nographic
