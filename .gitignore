@@ -1,6 +1,8 @@
 # External source trees and their nested repositories.
 /linux-6.12/
 /busybox-1.36.1/
+/u-boot/
+/u-boot-master/
 
 # QEMU, kernel, module and filesystem build output.
 /out/

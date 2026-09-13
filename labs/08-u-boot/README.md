@@ -16,6 +16,8 @@ U_BOOT_DIR=/path/to/u-boot labs/08-u-boot/build.sh
 /rootfs.cpio.gz
 ```
 
+为避免当前 U-Boot 向 Linux 交接时重复探测 QEMU PL061 导致 AMBA external abort，构建阶段只在本实验生成的 DTB 中禁用 `pl061` 和 `gpio-keys`；仓库公共设备树文件不受影响。
+
 ## 启动
 
 ```bash
@@ -33,10 +35,12 @@ ext4ls virtio 0 /
 
 ```text
 ext4load virtio 0 ${kernel_addr_r} /Image
+setenv fdt_addr_r 0x4a000000
 ext4load virtio 0 ${fdt_addr_r} /qemu-virt.dtb
 ext4load virtio 0 ${ramdisk_addr_r} /rootfs.cpio.gz
+setenv ramdisk_size ${filesize}
 setenv bootargs console=ttyAMA0 rdinit=/init loglevel=8
-booti ${kernel_addr_r} ${ramdisk_addr_r}:${filesize} ${fdt_addr_r}
+booti ${kernel_addr_r} ${ramdisk_addr_r}:${ramdisk_size} ${fdt_addr_r}
 ```
 
 不同 U-Boot 版本的 `virtio` 命令和内存变量可能不同，以当前版本的 `help` 和 `printenv` 为准。
